@@ -1,24 +1,22 @@
-# run_nvda_goldman.py
-
 import subprocess
 import sys
 
 cmd = [
     sys.executable,
-    "autoanalyst_v3.py",
+    "autoanalyst_v4.py",
 
-    "--company_name", "CoinShares PLC (CSHR)",
-    "--short_name", "CoinShares",
-    "--ticker", "CSHR",
+    "--company_name", "Eagle Nuclear Energy Corp. (NUCL)",
+    "--short_name", "Eagle",
+    "--ticker", "NUCL",
 
-    "--links_xlsx", "links/CSHR.xlsx",
+    "--links_xlsx", "links/NUCL.xlsx",
 
     "--report_model", "gpt-5-nano",
     "--source_model", "gpt-5-nano",
 
-    "--output_dir", "outputs/CSHR",
+    "--output_dir", "outputs/NUCL",
 
-    # "--auto_accept_highlights"
+    "--auto_accept_highlights"
 ]
 
 subprocess.run(cmd, check=True)
